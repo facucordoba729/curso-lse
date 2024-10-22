@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;04_reloj/source/LPC845_Project.c&apos; to &apos;04_reloj.c&apos;" description="Rename resource &apos;LPC845_Project.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/LPC845_Project.c" name="04_reloj.c" stamp="1729598428841" updateReferences="true"/>
+</session>

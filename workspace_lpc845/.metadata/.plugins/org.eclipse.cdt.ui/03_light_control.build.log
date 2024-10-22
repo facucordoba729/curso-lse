@@ -1,0 +1,11 @@
+08:51:40 **** Incremental Build of configuration Debug for project 03_light_control ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "03_light_control.axf"; # arm-none-eabi-objcopy -v -O binary "03_light_control.axf" "03_light_control.bin" ; # checksum -p LPC845 -d "03_light_control.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15916	      4	   2480	  18400	   47e0	03_light_control.axf
+ 
+
+08:51:41 Build Finished. 0 errors, 0 warnings. (took 509ms)
+

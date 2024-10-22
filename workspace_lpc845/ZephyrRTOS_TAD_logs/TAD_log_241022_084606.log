@@ -1,0 +1,6 @@
+"Task Aware Debugger for GDB" version 11.10.0 (202404041456)
+Copyright 2016-2023 NXP
+==================================
+08:42:32.325 INFO: [ZephyrRTOS] .config file could not be read [C:\Users\facum\Documents\curso lse\curso-lse 2\workspace_lpc845\03_light_control\Debug\.config (El sistema no puede encontrar el archivo especificado)]
+08:42:32.327 INFO: [TadModel] DSF session ID 3 has started.
+08:46:06.235 INFO: [TadModel] DSF session ID 3 has ended.
