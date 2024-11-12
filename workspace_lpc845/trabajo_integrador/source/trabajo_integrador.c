@@ -97,16 +97,3 @@ int main(void) {
     while(1);
     return 0;
 }
-
-
-
-
-
-TAREA USUARIO
-Iniciar el programa
-utilizar los pulsadores para determinar el valor en el display
-
-
-TAREA BH1750
-sensa la intenidad luminica
-regula el led dependiendo de esta intensidad luminica del ambiente
