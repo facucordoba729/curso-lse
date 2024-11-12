@@ -494,3 +494,502 @@ arm-none-eabi-size "03_light_control.axf"; # arm-none-eabi-objcopy -v -O binary 
    text	   data	    bss	    dec	    hex	filename
   15916	      4	   2480	  18400	   47e0	03_light_control.axf
  
+09:40:27 **** Clean-only build of configuration Debug for project 04_reloj ****
+make -r -j4 clean 
+rm -rf ./utilities/fsl_assert.d ./utilities/fsl_assert.o ./utilities/fsl_debug_console.d ./utilities/fsl_debug_console.o ./utilities/fsl_str.d ./utilities/fsl_str.o
+rm -rf ./startup/startup_lpc845.d ./startup/startup_lpc845.o
+rm -rf ./source/LPC845_Project.d ./source/LPC845_Project.o ./source/mtb.d ./source/mtb.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
+rm -rf ./drivers/fsl_clock.d ./drivers/fsl_clock.o ./drivers/fsl_common.d ./drivers/fsl_common.o ./drivers/fsl_common_arm.d ./drivers/fsl_common_arm.o ./drivers/fsl_gpio.d ./drivers/fsl_gpio.o ./drivers/fsl_power.d ./drivers/fsl_power.o ./drivers/fsl_reset.d ./drivers/fsl_reset.o ./drivers/fsl_swm.d ./drivers/fsl_swm.o ./drivers/fsl_usart.d ./drivers/fsl_usart.o
+rm -rf ./device/system_LPC845.d ./device/system_LPC845.o
+rm -rf ./component/uart/fsl_adapter_miniusart.d ./component/uart/fsl_adapter_miniusart.o
+rm -rf ./board/board.d ./board/board.o ./board/clock_config.d ./board/clock_config.o ./board/peripherals.d ./board/peripherals.o ./board/pin_mux.d ./board/pin_mux.o
+rm -rf LPC845_Project.axf
+ 
+09:40:30 **** Build of configuration Debug for project 04_reloj ****
+make -r -j4 all 
+Building file: ../utilities/fsl_assert.c
+Building file: ../utilities/fsl_debug_console.c
+Building file: ../utilities/fsl_str.c
+Building file: ../startup/startup_lpc845.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_assert.d" -MT"utilities/fsl_assert.o" -MT"utilities/fsl_assert.d" -o "utilities/fsl_assert.o" "../utilities/fsl_assert.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_str.d" -MT"utilities/fsl_str.o" -MT"utilities/fsl_str.d" -o "uInvoking: MCU C Compiler
+Invoking: MCU C Compiler
+tilities/fsl_str.o" "../utilities/fsl_str.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_debug_console.d" -MT"utilities/fsl_debug_console.o" -MT"utilities/fsl_debug_console.d" -o "utilities/fsl_debug_console.o" "../utilities/fsl_debug_console.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_lpc845.d" -MT"startup/startup_lpc845.o" -MT"startup/startup_lpc845.d" -o "startup/startup_lpc845.o" "../startup/startup_lpc845.c"
+Finished building: ../utilities/fsl_assert.c
+Finished building: ../utilities/fsl_debug_console.c
+Finished building: ../startup/startup_lpc845.c
+ 
+ 
+ 
+Building file: ../source/mtb.c
+Building file: ../source/semihost_hardfault.c
+Building file: ../source/04_reloj.c
+Finished building: ../utilities/fsl_str.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/mtb.d" -MT"source/mtb.o" -MT"source/mtb.d" -o "source/mtb.o" "../source/mtb.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
+ 
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/04_reloj.d" -MT"source/04_reloj.o" -MT"source/04_reloj.d" -o "source/04_reloj.o" "../source/04_reloj.c"
+Building file: ../drivers/fsl_clock.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
+../source/04_reloj.c:16:11: error: 'A0' undeclared here (not in a function)
+   16 | int f_d = A0;
+      |           ^~
+../source/04_reloj.c:17:11: error: 'A1' undeclared here (not in a function)
+   17 | int g_d = A1;
+      |           ^~
+../source/04_reloj.c:20:1: error: unknown type name 'byte'
+   20 | byte numeros[10][7] = {
+      | ^~~~
+../source/04_reloj.c: In function 'setup':
+../source/04_reloj.c:38:3: warning: implicit declaration of function 'pinMode' [-Wimplicit-function-declaration]
+   38 |   pinMode(a_u, OUTPUT);
+      |   ^~~~~~~
+../source/04_reloj.c:38:16: error: 'OUTPUT' undeclared (first use in this function)
+   38 |   pinMode(a_u, OUTPUT);
+      |                ^~~~~~
+../source/04_reloj.c:38:16: note: each undeclared identifier is reported only once for each function it appears in
+../source/04_reloj.c: In function 'loop':
+../source/04_reloj.c:57:3: warning: implicit declaration of function 'mostrarNumero' [-Wimplicit-function-declaration]
+   57 |   mostrarNumero(unidades, false);  // Unidades
+      |   ^~~~~~~~~~~~~
+../source/04_reloj.c:57:27: error: 'false' undeclared (first use in this function)
+   57 |   mostrarNumero(unidades, false);  // Unidades
+      |                           ^~~~~
+../source/04_reloj.c:1:1: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+  +++ |+#include <stdbool.h>
+    1 | // Pines para los segmentos del display de unidades
+../source/04_reloj.c:58:26: error: 'true' undeclared (first use in this function)
+   58 |   mostrarNumero(decenas, true);    // Decenas
+      |                          ^~~~
+../source/04_reloj.c:58:26: note: 'true' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+../source/04_reloj.c:61:3: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+   61 |   delay(1000);
+      |   ^~~~~
+../source/04_reloj.c: At top level:
+../source/04_reloj.c:80:32: error: unknown type name 'bool'
+   80 | void mostrarNumero(int numero, bool esDecena) {
+      |                                ^~~~
+../source/04_reloj.c:80:32: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+make[1]: *** [source/subdir.mk:26: source/04_reloj.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../source/semihost_hardfault.c
+Finished building: ../source/mtb.c
+ 
+ 
+Finished building: ../drivers/fsl_clock.c
+ 
+make: *** [makefile:41: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+10:00:26 **** Incremental Build of configuration Debug for project 04_reloj ****
+make -r -j4 all 
+Building file: ../source/04_reloj.c
+Building file: ../drivers/fsl_common.c
+Building file: ../drivers/fsl_common_arm.c
+Building file: ../drivers/fsl_gpio.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/04_reloj.d" -MT"source/04_reloj.o" -MT"source/04_reloj.d" -o "source/04_reloj.o" "../source/04_reloj.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common_arm.d" -MT"drivers/fsl_common_arm.o" -MT"drivers/fsl_common_arm.d" -o "drivers/fsl_common_arm.o" "../drivers/fsl_common_arm.c"
+../source/04_reloj.c:3:10: fatal error: FreeRTOS.h: No such file or directory
+    3 | #include "FreeRTOS.h"
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [source/subdir.mk:26: source/04_reloj.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../drivers/fsl_gpio.c
+Finished building: ../drivers/fsl_common.c
+Finished building: ../drivers/fsl_common_arm.c
+ 
+ 
+ 
+make: *** [makefile:41: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+10:22:55 **** Build of configuration Debug for project freertos ****
+make -r -j4 all 
+Building file: ../src/croutine.c
+Building file: ../src/event_groups.c
+Building file: ../src/heap_2.c
+Building file: ../src/list.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/croutine.d" -MT"src/croutine.o" -MT"src/croutine.d" -o "src/croutine.o" "../src/croutine.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/event_groups.d" -MT"src/event_groups.o" -MT"src/event_groups.d" -o "src/event_groups.o" "../src/event_groups.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/heap_2.d" -MT"src/heap_2.o" -MT"src/heap_2.d" -o "src/heap_2.o" "../src/heap_2.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/list.d" -MT"src/list.o" -MT"src/list.d" -o "src/list.o" "../src/list.c"
+Finished building: ../src/croutine.c
+Finished building: ../src/heap_2.c
+Finished building: ../src/list.c
+Finished building: ../src/event_groups.c
+ 
+ 
+ 
+ 
+Building file: ../src/port.c
+Building file: ../src/queue.c
+Building file: ../src/stream_buffer.c
+Building file: ../src/tasks.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/port.d" -MT"src/port.o" -MT"src/port.d" -o "src/port.o" "../src/port.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/stream_buffer.d" -MT"src/stream_buffer.o" -MT"src/stream_buffer.d" -o "src/stream_buffer.o" "../src/stream_buffer.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/queue.d" -MT"src/queue.o" -MT"src/queue.d" -o "src/queue.o" "../src/queue.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/tasks.d" -MT"src/tasks.o" -MT"src/tasks.d" -o "src/tasks.o" "../src/tasks.c"
+Finished building: ../src/port.c
+Finished building: ../src/stream_buffer.c
+ 
+ 
+Finished building: ../src/queue.c
+Finished building: ../src/tasks.c
+Building file: ../src/timers.c
+ 
+ 
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M0PLUS -D__LPC84X__ -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"= -mcpu=cortex-m0 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/timers.d" -MT"src/timers.o" -MT"src/timers.d" -o "src/timers.o" "../src/timers.c"
+Finished building: ../src/timers.c
+ 
+Building target: libfreertos.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libfreertos.a" ./src/croutine.o ./src/event_groups.o ./src/heap_2.o ./src/list.o ./src/port.o ./src/queue.o ./src/stream_buffer.o ./src/tasks.o ./src/timers.o   
+arm-none-eabi-ar: creating libfreertos.a
+Finished building target: libfreertos.a
+ 
+Performing post-build steps
+arm-none-eabi-size "libfreertos.a" ; # arm-none-eabi-objdump -h -S "libfreertos.a" >"libfreertos.lss"
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	croutine.o (ex libfreertos.a)
+   1278	      0	      0	   1278	    4fe	event_groups.o (ex libfreertos.a)
+    702	      4	   4116	   4822	   12d6	heap_2.o (ex libfreertos.a)
+    338	      0	      0	    338	    152	list.o (ex libfreertos.a)
+   1098	      4	     12	   1114	    45a	port.o (ex libfreertos.a)
+   4570	      0	     64	   4634	   121a	queue.o (ex libfreertos.a)
+   2810	      0	      0	   2810	    afa	stream_buffer.o (ex libfreertos.a)
+  10495	      0	    320	  10815	   2a3f	tasks.o (ex libfreertos.a)
+      0	      0	      0	      0	      0	timers.o (ex libfreertos.a)
+ 
+10:22:59 **** Incremental Build of configuration Debug for project 04_reloj ****
+make -r -j4 all 
+Building file: ../utilities/fsl_assert.c
+Building file: ../utilities/fsl_debug_console.c
+Building file: ../utilities/fsl_str.c
+Building file: ../startup/startup_lpc845.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_assert.d" -MT"utilities/fsl_assert.o" -MT"utilities/fsl_assert.d" -o "utilities/fsl_assert.o" "../utilities/fsl_assert.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilitieInvoking: MCU C Compiler
+Invoking: MCU C Compiler
+s/fsl_debug_console.d" -MT"utilities/fsl_debug_console.o" -MT"utilities/fsl_debug_console.d" -o "utilities/fsl_debug_console.o" "../utilities/fsl_debug_console.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_lpc845.d" -MT"startup/startup_lpc845.o" -MT"startup/startup_lpc845.d" -o "startup/startup_lpc845.o" "../startup/startup_lpc845.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_str.d" -MT"utilities/fsl_str.o" -MT"utilities/fsl_str.d" -o "utilities/fsl_str.o" "../utilities/fsl_str.c"
+Finished building: ../utilities/fsl_debug_console.c
+Finished building: ../startup/startup_lpc845.c
+Finished building: ../utilities/fsl_assert.c
+ 
+ 
+ 
+Building file: ../source/04_reloj.c
+Building file: ../source/semihost_hardfault.c
+Building file: ../source/mtb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/04_reloj.d" -MT"source/04_reloj.o" -MT"source/04_reloj.d" -o "source/04_reloj.o" "../source/04_reloj.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/mtb.d" -MT"source/mtb.o" -MT"source/mtb.d" -o "source/mtb.o" "../source/mtb.c"
+Finished building: ../utilities/fsl_str.c
+ 
+../source/04_reloj.c: In function 'task_blink':
+../source/04_reloj.c:15:17: warning: implicit declaration of function 'GPIO_PinWrite' [-Wimplicit-function-declaration]
+   15 |                 GPIO_PinWrite(GPIO, 1, LED_BLUE, !GPIO_PinRead(GPIO, 1, LED_BLUE));
+      |                 ^~~~~~~~~~~~~
+../source/04_reloj.c:15:31: error: 'GPIO' undeclared (first use in this function)
+   15 |                 GPIO_PinWrite(GPIO, 1, LED_BLUE, !GPIO_PinRead(GPIO, 1, LED_BLUE));
+      |                               ^~~~
+../source/04_reloj.c:15:31: note: each undeclared identifier is reported only once for each function it appears in
+../source/04_reloj.c:15:51: warning: implicit declaration of function 'GPIO_PinRead' [-Wimplicit-function-declaration]
+   15 |                 GPIO_PinWrite(GPIO, 1, LED_BLUE, !GPIO_PinRead(GPIO, 1, LED_BLUE));
+      |                                                   ^~~~~~~~~~~~
+../source/04_reloj.c: In function 'main':
+../source/04_reloj.c:26:9: warning: implicit declaration of function 'BOARD_BootClockFRO30M' [-Wimplicit-function-declaration]
+   26 |         BOARD_BootClockFRO30M();
+      |         ^~~~~~~~~~~~~~~~~~~~~
+../source/04_reloj.c:28:9: error: unknown type name 'gpio_pin_config_t'
+   28 |         gpio_pin_config_t out_config = { kGPIO_DigitalOutput, 1 };
+      |         ^~~~~~~~~~~~~~~~~
+../source/04_reloj.c:28:42: error: 'kGPIO_DigitalOutput' undeclared (first use in this function)
+   28 |         gpio_pin_config_t out_config = { kGPIO_DigitalOutput, 1 };
+      |                                          ^~~~~~~~~~~~~~~~~~~
+../source/04_reloj.c:28:63: warning: excess elements in scalar initializer
+   28 |         gpio_pin_config_t out_config = { kGPIO_DigitalOutput, 1 };
+      |                                                               ^
+../source/04_reloj.c:28:63: note: (near initialization for 'out_config')
+../source/04_reloj.c:29:9: warning: implicit declaration of function 'GPIO_PortInit' [-Wimplicit-function-declaration]
+   29 |         GPIO_PortInit(GPIO, 1);
+      |         ^~~~~~~~~~~~~
+../source/04_reloj.c:29:23: error: 'GPIO' undeclared (first use in this function)
+   29 |         GPIO_PortInit(GPIO, 1);
+      |                       ^~~~
+../source/04_reloj.c:30:9: warning: implicit declaration of function 'GPIO_PinInit' [-Wimplicit-function-declaration]
+   30 |         GPIO_PinInit(GPIO, 1, LED_BLUE, &out_config);
+      |         ^~~~~~~~~~~~
+Building file: ../drivers/fsl_clock.c
+make[1]: *** [source/subdir.mk:26: source/04_reloj.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\04_reloj\utilities" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
+Finished building: ../source/semihost_hardfault.c
+ 
+Finished building: ../source/mtb.c
+ 
+Finished building: ../drivers/fsl_clock.c
+ 
+make: *** [makefile:41: all] Error 2
+"make -r -j4 all" terminated with exit code 2. Build might be incomplete.
+09:07:49 **** Build of configuration Debug for project freertos ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "libfreertos.a" ; # arm-none-eabi-objdump -h -S "libfreertos.a" >"libfreertos.lss"
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	croutine.o (ex libfreertos.a)
+   1278	      0	      0	   1278	    4fe	event_groups.o (ex libfreertos.a)
+    702	      4	   4116	   4822	   12d6	heap_2.o (ex libfreertos.a)
+    338	      0	      0	    338	    152	list.o (ex libfreertos.a)
+   1098	      4	     12	   1114	    45a	port.o (ex libfreertos.a)
+   4570	      0	     64	   4634	   121a	queue.o (ex libfreertos.a)
+   2810	      0	      0	   2810	    afa	stream_buffer.o (ex libfreertos.a)
+  10495	      0	    320	  10815	   2a3f	tasks.o (ex libfreertos.a)
+      0	      0	      0	      0	      0	timers.o (ex libfreertos.a)
+ 
+09:07:50 **** Clean-only build of configuration Debug for project trabajo_integrador ****
+make -r -j4 clean 
+rm -rf ./utilities/fsl_assert.d ./utilities/fsl_assert.o ./utilities/fsl_debug_console.d ./utilities/fsl_debug_console.o ./utilities/fsl_str.d ./utilities/fsl_str.o
+rm -rf ./startup/startup_lpc845.d ./startup/startup_lpc845.o
+rm -rf ./source/TP_Integrador.d ./source/TP_Integrador.o ./source/app_tasks.d ./source/app_tasks.o ./source/mtb.d ./source/mtb.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/wrappers.d ./source/wrappers.o
+rm -rf ./drivers/fsl_adc.d ./drivers/fsl_adc.o ./drivers/fsl_clock.d ./drivers/fsl_clock.o ./drivers/fsl_common.d ./drivers/fsl_common.o ./drivers/fsl_common_arm.d ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.d ./drivers/fsl_ctimer.o ./drivers/fsl_dac.d ./drivers/fsl_dac.o ./drivers/fsl_dma.d ./drivers/fsl_dma.o ./drivers/fsl_gpio.d ./drivers/fsl_gpio.o ./drivers/fsl_i2c.d ./drivers/fsl_i2c.o ./drivers/fsl_i2c_dma.d ./drivers/fsl_i2c_dma.o ./drivers/fsl_power.d ./drivers/fsl_power.o ./drivers/fsl_reset.d ./drivers/fsl_reset.o ./drivers/fsl_sctimer.d ./drivers/fsl_sctimer.o ./drivers/fsl_spi.d ./drivers/fsl_spi.o ./drivers/fsl_swm.d ./drivers/fsl_swm.o ./drivers/fsl_syscon.d ./drivers/fsl_syscon.o ./drivers/fsl_usart.d ./drivers/fsl_usart.o
+rm -rf ./device/system_LPC845.d ./device/system_LPC845.o
+rm -rf ./component/uart/fsl_adapter_miniusart.d ./component/uart/fsl_adapter_miniusart.o
+rm -rf ./board/board.d ./board/board.o ./board/clock_config.d ./board/clock_config.o ./board/peripherals.d ./board/peripherals.o ./board/pin_mux.d ./board/pin_mux.o
+rm -rf TP_Integrador.axf
+ 
+09:07:53 **** Build of configuration Debug for project trabajo_integrador ****
+make -r -j4 all 
+Building file: ../utilities/fsl_assert.c
+Building file: ../utilities/fsl_debug_console.c
+Building file: ../utilities/fsl_str.c
+Building file: ../startup/startup_lpc845.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_assert.d" -MT"utilities/fsl_assert.o" -MT"utilities/fsl_assert.d" -o "utilities/fsl_assert.o" "../utilities/fsl_assert.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_debug_console.d" -MT"utilities/fsl_debug_console.o" -MT"utilities/fsl_debug_console.d" -o "utilities/fsl_debug_console.o" "../utilities/fsl_debug_console.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../utilities/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"utilities/fsl_str.d" -MT"utilities/fsl_str.o" -MT"utilities/fsl_str.d" -o "utilities/fsl_str.o" "../utilities/fsl_str.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_lpc845.d" -MT"startup/startup_lpc845.o" -MT"startup/startup_lpc845.d" -o "startup/startup_lpc845.o" "../startup/startup_lpc845.c"
+Finished building: ../startup/startup_lpc845.c
+Finished building: ../utilities/fsl_assert.c
+Finished building: ../utilities/fsl_debug_console.c
+Finished building: ../utilities/fsl_str.c
+ 
+ 
+ 
+ 
+Building file: ../source/app_tasks.c
+Building file: ../source/mtb.c
+Building file: ../source/semihost_hardfault.c
+Building file: ../source/trabajo_integrador.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/app_tasks.d" -MT"source/app_tasks.o" -MT"source/app_tasks.d" -o "source/app_tasks.o" "../source/app_tasks.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/mtb.d" -MT"source/mtb.o" -MT"source/mtb.d" -o "source/mtb.o" "../source/mtb.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/trabajo_integrador.d" -MT"source/trabajo_integrador.o" -MT"source/trabajo_integrador.d" -o "source/trabajo_integrador.o" "../source/trabajo_integrador.c"
+Finished building: ../source/mtb.c
+Finished building: ../source/semihost_hardfault.c
+ 
+ 
+Building file: ../source/wrappers.c
+Building file: ../drivers/fsl_adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/wrappers.d" -MT"source/wrappers.o" -MT"source/wrappers.d" -o "source/wrappers.o" "../source/wrappers.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_adc.d" -MT"drivers/fsl_adc.o" -MT"drivers/fsl_adc.d" -o "drivers/fsl_adc.o" "../drivers/fsl_adc.c"
+In file included from C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device/fsl_device_registers.h:23,
+                 from C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers/fsl_common.h:22,
+                 from C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board/clock_config.h:11,
+                 from C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board/board.h:11,
+                 from C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc/wrappers.h:4,
+                 from ../source/wrappers.c:1:
+../source/wrappers.c: In function 'wrapper_i2c_init':
+C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device/LPC845.h:3803:50: warning: passing argument 1 of 'I2C_MasterInit' makes pointer from integer without a cast [-Wint-conversion]
+ 3803 | #define I2C1_BASE                                (0x40054000u)
+      |                                                  ^~~~~~~~~~~~~
+      |                                                  |
+      |                                                  unsigned int
+../source/wrappers.c:161:20: note: in expansion of macro 'I2C1_BASE'
+  161 |     I2C_MasterInit(I2C1_BASE, &config, SystemCoreClock);
+      |                    ^~~~~~~~~
+In file included from C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc/wrappers.h:9:
+C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers/fsl_i2c.h:421:31: note: expected 'I2C_Type *' but argument is of type 'unsigned int'
+  421 | void I2C_MasterInit(I2C_Type *base, const i2c_master_config_t *masterConfig, uint32_t srcClock_Hz);
+      |                     ~~~~~~~~~~^~~~
+Finished building: ../source/trabajo_integrador.c
+ 
+Finished building: ../source/app_tasks.c
+ 
+Building file: ../drivers/fsl_clock.c
+Building file: ../drivers/fsl_common.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
+Invoking: MCU C Compiler
+Finished building: ../drivers/fsl_adc.c
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
+ 
+Finished building: ../source/wrappers.c
+Building file: ../drivers/fsl_common_arm.c
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common_arm.d" -MT"drivers/fsl_common_arm.o" -MT"drivers/fsl_common_arm.d" -o "drivers/fsl_common_arm.o" "../drivers/fsl_common_arm.c"
+Building file: ../drivers/fsl_ctimer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_ctimer.d" -MT"drivers/fsl_ctimer.o" -MT"drivers/fsl_ctimer.d" -o "drivers/fsl_ctimer.o" "../drivers/fsl_ctimer.c"
+Finished building: ../drivers/fsl_common.c
+Finished building: ../drivers/fsl_clock.c
+ 
+ 
+Building file: ../drivers/fsl_dac.c
+Building file: ../drivers/fsl_dma.c
+Finished building: ../drivers/fsl_common_arm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_dma.d" -MT"drivers/fsl_dma.o" -MT"drivers/fsl_dma.d" -o "drivers/fsl_dma.o" "../drivers/fsl_dma.c"
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_dac.d" -MT"drivers/fsl_dac.o" -MT"drivers/fsl_dac.d" -o "drivers/fsl_dac.o" "../drivers/fsl_dac.c"
+Building file: ../drivers/fsl_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
+Finished building: ../drivers/fsl_ctimer.c
+ 
+Building file: ../drivers/fsl_i2c.c
+Finished building: ../drivers/fsl_dac.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_i2c.d" -MT"drivers/fsl_i2c.o" -MT"drivers/fsl_i2c.d" -o "drivers/fsl_i2c.o" "../drivers/fsl_i2c.c"
+ 
+Building file: ../drivers/fsl_i2c_dma.c
+Finished building: ../drivers/fsl_dma.c
+Finished building: ../drivers/fsl_gpio.c
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_i2c_dma.d" -MT"drivers/fsl_i2c_dma.o" -MT"drivers/fsl_i2c_dma.d" -o "drivers/fsl_i2c_dma.o" "../drivers/fsl_i2c_dma.c"
+ 
+Building file: ../drivers/fsl_power.c
+Building file: ../drivers/fsl_reset.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_power.d" -MT"drivers/fsl_power.o" -MT"drivers/fsl_power.d" -o "drivers/fsl_power.o" "../drivers/fsl_power.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_reset.d" -MT"drivers/fsl_reset.o" -MT"drivers/fsl_reset.d" -o "drivers/fsl_reset.o" "../drivers/fsl_reset.c"
+../drivers/fsl_i2c_dma.c:42:18: warning: 's_i2cSlaveIsr' defined but not used [-Wunused-variable]
+   42 | static i2c_isr_t s_i2cSlaveIsr;
+      |                  ^~~~~~~~~~~~~
+Finished building: ../drivers/fsl_i2c.c
+Finished building: ../drivers/fsl_reset.c
+Finished building: ../drivers/fsl_i2c_dma.c
+ 
+ 
+Building file: ../drivers/fsl_spi.c
+Building file: ../drivers/fsl_sctimer.c
+ 
+Finished building: ../drivers/fsl_power.c
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_sctimer.d" -MT"drivers/fsl_sctimer.o" -MT"drivers/fsl_sctimer.d" -o "drivers/fsl_sctimer.o" "../drivers/fsl_sctimer.c"
+Building file: ../drivers/fsl_swm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_spi.d" -MT"drivers/fsl_spi.o" -MT"drivers/fsl_spi.d" -o "drivers/fsl_spi.o" "../drivers/fsl_spi.c"
+Building file: ../drivers/fsl_syscon.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_swm.d" -MT"drivers/fsl_swm.o" -MT"drivers/fsl_swm.d" -o "drivers/fsl_swm.o" "../drivers/fsl_swm.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_syscon.d" -MT"drivers/fsl_syscon.o" -MT"drivers/fsl_syscon.d" -o "drivers/fsl_syscon.o" "../drivers/fsl_syscon.c"
+Finished building: ../drivers/fsl_swm.c
+Finished building: ../drivers/fsl_syscon.c
+ 
+ 
+Finished building: ../drivers/fsl_spi.c
+Finished building: ../drivers/fsl_sctimer.c
+Building file: ../device/system_LPC845.c
+Building file: ../drivers/fsl_usart.c
+ 
+ 
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../device/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"device/system_LPC845.d" -MT"device/system_LPC845.o" -MT"device/system_LPC845.d" -o "device/system_LPC845.o" "../device/system_LPC845.c"
+Building file: ../component/uart/fsl_adapter_miniusart.c
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_usart.d" -MT"drivers/fsl_usart.o" -MT"drivers/fsl_usart.d" -o "drivers/fsl_usart.o" "../drivers/fsl_usart.c"
+Building file: ../board/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/uart/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/uart/fsl_adapter_miniusart.d" -MT"component/uart/fsl_adapter_miniusart.o" -MT"component/uart/fsl_adapter_miniusart.d" -o "component/uart/fsl_adapter_miniusart.o" "../component/uart/fsl_adapter_miniusart.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
+Finished building: ../device/system_LPC845.c
+Finished building: ../component/uart/fsl_adapter_miniusart.c
+Finished building: ../board/board.c
+ 
+ 
+ 
+Building file: ../board/clock_config.c
+Building file: ../board/peripherals.c
+Building file: ../board/pin_mux.c
+Finished building: ../drivers/fsl_usart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+arm-none-eabi-gcc -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\board" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\source" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\component\uart" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\drivers" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\CMSIS" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\device" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\utilities" -I"C:\Users\facum\Documents\curso-lse\workspace_lpc845\trabajo_integrador\inc" -I"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\inc" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
+Finished building: ../board/peripherals.c
+ 
+Finished building: ../board/clock_config.c
+Finished building: ../board/pin_mux.c
+ 
+ 
+Building target: trabajo_integrador.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\facum\Documents\curso-lse\lpc845\ejemplos\freertos\Debug" -Xlinker -Map="trabajo_integrador.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T trabajo_integrador_Debug.ld -o "trabajo_integrador.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/app_tasks.o ./source/mtb.o ./source/semihost_hardfault.o ./source/trabajo_integrador.o ./source/wrappers.o  ./drivers/fsl_adc.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_dac.o ./drivers/fsl_dma.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_i2c_dma.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_spi.o ./drivers/fsl_swm.o ./drivers/fsl_syscon.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o    -lfreertos
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       33808 B        64 KB     51.59%
+            SRAM:        5044 B      16352 B     30.85%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: trabajo_integrador.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "trabajo_integrador.axf"; # arm-none-eabi-objcopy -v -O binary "trabajo_integrador.axf" "trabajo_integrador.bin" ; # checksum -p LPC845 -d "trabajo_integrador.bin";
+   text	   data	    bss	    dec	    hex	filename
+  33796	     12	   5032	  38840	   97b8	trabajo_integrador.axf
+ 
+09:08:06 **** Incremental Build of configuration Debug for project trabajo_integrador ****
+make -r -j4 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "trabajo_integrador.axf"; # arm-none-eabi-objcopy -v -O binary "trabajo_integrador.axf" "trabajo_integrador.bin" ; # checksum -p LPC845 -d "trabajo_integrador.bin";
+   text	   data	    bss	    dec	    hex	filename
+  33796	     12	   5032	  38840	   97b8	trabajo_integrador.axf
+ 

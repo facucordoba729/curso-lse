@@ -1,48 +1,45 @@
-/*
- * Copyright 2016-2024 NXP
- * All rights reserved.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
+#include "board.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+// GPIO del LED azul
+#define LED_BLUE	1
 
 /**
- * @file    LPC845_Project.c
- * @brief   Application entry point.
+ * @brief Tarea que hace parpadear el LED
  */
-#include <stdio.h>
-#include "board.h"
-#include "peripherals.h"
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "fsl_debug_console.h"
-/* TODO: insert other include files here. */
+void task_blink(void *params) {
 
-/* TODO: insert other definitions and declarations here. */
+	while(1) {
+		// Conmuto el LED
+		GPIO_PinWrite(GPIO, 1, LED_BLUE, !GPIO_PinRead(GPIO, 1, LED_BLUE));
+		// Bloqueo la tarea por medio segundo (500 ticks)
+		vTaskDelay(500);
+	}
+}
 
-/*
- * @brief   Application entry point.
+/**
+ * @brief Programa principal
  */
 int main(void) {
+	// Clock del sistema de 30 MHz
+	BOARD_BootClockFRO30M();
+	// Inicializo el puerto
+	gpio_pin_config_t out_config = { kGPIO_DigitalOutput, 1 };
+	GPIO_PortInit(GPIO, 1);
+	GPIO_PinInit(GPIO, 1, LED_BLUE, &out_config);
 
-    /* Init board hardware. */
-    BOARD_InitBootPins();
-    BOARD_InitBootClocks();
-    BOARD_InitBootPeripherals();
-#ifndef BOARD_INIT_DEBUG_CONSOLE_PERIPHERAL
-    /* Init FSL debug console. */
-    BOARD_InitDebugConsole();
-#endif
+	xTaskCreate(
+		task_blink,					// Callback de la tarea
+		"Blinky",					// Nombre
+		configMINIMAL_STACK_SIZE,	// Stack reservado
+		NULL,						// Sin parametros
+		tskIDLE_PRIORITY + 1UL,		// Prioridad
+		NULL						// Sin handler
+	);
 
-    PRINTF("Hello World\r\n");
+	vTaskStartScheduler();
 
-    /* Force the counter to be placed into memory. */
-    volatile static int i = 0 ;
-    /* Enter an infinite loop, just incrementing a counter. */
-    while(1) {
-        i++ ;
-        /* 'Dummy' NOP to allow source level single stepping of
-            tight while() loop */
-        __asm volatile ("nop");
-    }
-    return 0 ;
+    while(1);
+    return 0;
 }

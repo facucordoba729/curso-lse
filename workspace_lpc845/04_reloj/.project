@@ -3,6 +3,7 @@
 	<name>04_reloj</name>
 	<comment></comment>
 	<projects>
+		<project>freertos</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
